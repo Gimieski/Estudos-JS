@@ -13,7 +13,8 @@
     <button onclick="calcular('/')">/</button>
     <!-- onclick ativa uma função -->
 
-    <!-- preciso fazer com que 1 unica função automatize esta cauculadora, mas os parametros sejam diferente para que façam coisas diferentes -->
+    <!-- preciso fazer com que 1 unica função automatize esta cauculadora, mas os parametros recebidos sejam diferente 
+    para que façam coisas diferentes -->
 
     <div id="seletor"></div>
 </body>
@@ -28,7 +29,8 @@
        seletor.innerHTML=p;
     //o document seleciona a div e escreve o resultado do prompt, Então quando utilizarmos ela de novo, vai pegar oq esta escrito no documento
     }
-    // esta função vai ter casos para executar tal coisa
+    // um parametro é um valor passado em uma função. os valores ficam onde a função é aplicada, para que elas façam coisas
+    // diferentes. E este simbolo é o nome do parametro que vai armazenar os parametros
     function calcular(simbolo){
        var p2=parseFloat(prompt("Digite um numero para efetuar o calculo"));
 

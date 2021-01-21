@@ -20,9 +20,11 @@
     //   depois de digitar um numero a tabuada é limpada pela função
       var i=1;
 
+    //   enquanto i for menor ou igual a 20, vai executar esta instrução
       while(i <= 20){
             mensagem += n + 'x' + i + '=' + (n*i) + '<br>';
             i++;
+            // a instrução vai adicionar a variave mensagem o n(numero digitado) x i(que vai entrar em loop 1,2,3)= a multiplicação disso
         } 
         seletor.innerHTML = mensagem;
     }
@@ -32,8 +34,15 @@
     function limparTabuada(){
         mensagem="";
         seletor.innerHTML = mensagem;
+        // a variavel seletor vai escrever no html e ela é igual a outra variavel, a mensagem
     }
     // essas não fazem parte do loop, então não é dentro. mas é possivel coloca-los lá
+    
+    
+    /*A função tabuada vai pedir para você digitar um numero, depois disso ele vai criar um loop com esse numero, que vai
+     ser a tabuada. No loop ele vai escrever esse seu numero digitar mais o numero multiplicado, que vai servir para conti
+     nuar o loop, pois é ele que vai ficar indo de 1,2,3,4...
+     */
 
 
     </script>
