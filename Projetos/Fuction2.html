@@ -10,24 +10,24 @@
         <button onclick="mostrarTabuada()">Criar tabuada</button>
         <button onclick="limparTabuada()">Limpar tabuada</button>
     
-    <script>
-        function mostrarTabuada(){
-            prompt("Digite um número:");
-        }
-        
-        var num=0;
-        var seletor=document.querySelector("#seletor")
-
-        // a var seletor é a variavel usada para alcançarmos de forma rapida o elemento div
-        var mensagem="";
-        // é a variavel que criamos para colocar valores. ela vai funvona como um decument.wite
-        for(num;num<=1000;num++){
-           mensagem += "i:" + num + "<br>";
-
-        } 
-        seletor.innerHTML= mensagem;
-
-        
-    </script>
 </body>
+<script>
+    function mostrarTabuada(){
+        prompt("Digite um número:");
+    }
+    
+    var num=0;
+    var seletor=document.querySelector("#seletor")
+
+    // a var seletor é a variavel usada para alcançarmos de forma rapida o elemento div
+    var mensagem="";
+    // é a variavel que criamos para colocar valores. ela vai funvona como um decument.wite
+    for(num;num<=1000;num++){
+       mensagem += "i:" + num + "<br>";
+
+    } 
+    seletor.innerHTML= mensagem;
+
+    
+</script>
 </html>
