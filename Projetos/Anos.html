@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+<script>
+      //  mostrar na tela os anos de 1004 até 2017, em qautro em quatro porem soos anos bissextos
+        var sla=1004;
+     // enquanto sla for menor ou igual que 2017, ele vai verificar se sla é multiplo de 100 e 400
+        while(sla<=2017){
+            sla=sla+4;
+            // aqui eles esta escrevendo de 4 em 4
+        // aqui estamos verificando se NÂO é multiplo de 100(pois ano bixesto são de 100), por exemplo se for, vai executar.se não for não vai
+        if(!(sla%100 == 0) || (sla%400 == 0)){
+            document.write(sla+ "<br>");
+        }
+     }
+</script>
+</body>
+</html>

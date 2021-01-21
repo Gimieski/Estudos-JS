@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Refazendo Tabuada</h1>
+    
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+    <button onclick="limparTabuada()">LimparTabuada</button>
+    <div id="seletor"></div>
+</body>
+<script>
+    //  criar um projeto onde clica no botão gera uma tabuada
+    function mostrarTabuada(){
+      var n=parseFloat(prompt("Digite um número"));
+      limparTabuada()
+    //   depois de digitar um numero a tabuada é limpada pela função
+      var i=1;
+
+      while(i <= 20){
+            mensagem += n + 'x' + i + '=' + (n*i) + '<br>';
+            i++;
+        } 
+        seletor.innerHTML = mensagem;
+    }
+    var seletor = document.querySelector('#seletor');
+    var mensagem="";
+
+    function limparTabuada(){
+        mensagem="";
+        seletor.innerHTML = mensagem;
+    }
+    // essas não fazem parte do loop, então não é dentro. mas é possivel coloca-los lá
+
+
+    </script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+<body>
+    <h1>Sorteio</h1>
+</body>
+<script>
+    // Neste exercicio estamos fazendo um sorteio de 1 a 0 com o Math.random. Para usar ele, devemos converter para inteiro e fazer vezes 2
+     
+    alert("Jogador 1 vs Jogador 2, dependendo de sua sorte!, escolha um número(0 ou 1) e o sorteado ganha!");
+     var jogador1=parseInt(prompt("Digite um número Jogador 1"));
+     var jogador2=parseInt(prompt("Digite um número Jogador 2"));
+  
+  var Sorteio=parseInt( Math.random() *2 );
+ // se o numero sorteado for 0, ganha o menor, se sortear 1 ganha o maior
+ 
+ if(Sorteio===0 && jogador1<jogador2 || Sorteio===1 && jogador1>jogador2){
+     alert("Jogador 1 venceu, pois o número sorteado foi: "+Sorteio);
+ }else{
+     alert("Jogador 2 venceu, pois o numero sorteado foi: "+Sorteio);
+ }
+ //  então um jeito de fazer isso é fazer separadamente os jogadores
+ 
+ </script>
+</html>

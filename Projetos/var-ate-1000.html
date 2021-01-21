@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="seletor"></div>
+    
+    <script>
+        // a gente quer escrever no html que a i é igual a tal número até 1000
+        
+        var num=0;
+        var seletor=document.querySelector("#seletor")
+
+        // a var seletor é a variavel usada para alcançarmos de forma rapida o elemento div
+        var mensagem="";
+        // é a variavel que criamos para colocar valores. ela vai funvona como um decument.wite
+        for(num;num<=1000;num++){
+           mensagem += "i:" + num + "<br>";
+
+        } 
+        seletor.innerHTML= mensagem;
+
+        
+    </script>
+</body>
+</html>
