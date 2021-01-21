@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Mostrando área de um triângulo</h1>
+    <button onclick="mostrarAreaAlert()">Alert</button>
+    <button onclick="mostrarAreaOutput()">Output</button>
+    <button onclick="reset()">Resetar</button>
+
+    <div id="html"></div>
+</body>
+<script>
+ var largura=parseFloat(prompt("Digite a largura"));
+ var altura=parseFloat(prompt("Digite a altura"));
+ var mensagem="";
+ var seletor=document.querySelector("#html");
+// Aqui estamos fazendo um código para que uma função mostre o calculo da area e altura, e as outras retornem essa conta
+// mostrando em diferentes ocasiôes.
+ function mostrarAreaAlert(){
+     var area=calcularArea(largura,altura);
+
+     alert("Area =" + area)
+ }
+
+ function mostrarAreaOutput(){
+    var area=calcularArea(largura,altura);
+    mensagem="Area ="+area;
+    seletor.innerHTML=mensagem;
+ }
+
+ function calcularArea(l,a){
+    return l*a;
+// FUNÇÔES QUE RETORNAM VALORES. É uma forma de retornar valores com funções; isso pode facilitar em um codigo cheio de funções
+ }
+
+ function reset(){
+    mensagem="";
+    seletor.innerHTML=mensagem;
+ }
+
+</script>
+
+</html>
