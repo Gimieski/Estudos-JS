@@ -34,7 +34,12 @@ ou modelar melhor as funções -->
 // ele selecionou a div pegou oq tem dentro e converteu para numero. adendo: oq vai ter na div é relativo a função escrever
                 var n2 = parseFloat(prompt('Digite outro número'));
 // depois pediu outro numero
-
+                 try{
+                     var msg = calcular(op, n1, n2);
+                 }catch(e){
+                     alert(e);
+                     return;
+                 }
                 var msg = calcular(op, n1, n2);
 //Var msg armazena a execução do codigo calcular recebendo paramtros na hora da execução
 // eu preciso botar os paramtros aqui para usar depois
@@ -64,7 +69,6 @@ ou modelar melhor as funções -->
                 var numeroCalculado = null;
 
                 if(op!== "+" && op!== "-" && op!== "*" && op!== "/" ){
-                    alert("Digite algo valido")
                     throw new Error('Digite algo valido')
                     // então se for diferenet executa este error
                 
@@ -72,10 +76,10 @@ ou modelar melhor as funções -->
 // digitar algo diferente de numeros da erro
                 if(isNaN(n1)|| isNaN(n2)){
                 //se o n1 não puder ser convertido para numero ou n2 não puder 
-                alert("Digite algo valido");
                 throw new Error('Digite algo valido')
-                
+                    // então se for diferenet executa este error
                 }
+                
                 switch(op){
 
                     case '+':
@@ -103,5 +107,6 @@ ou modelar melhor as funções -->
 
                 return numeroCalculado;
             }
-        </script>
+        
+            </script>
 </html>

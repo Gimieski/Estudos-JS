@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <button onclick="areaTotal()">Mostrar área total</button>
+
+    <div id=void></div>
+</body>
+<script>
+    var p=parseFloat(prompt("Digite a altura"));
+    var p2=parseFloat(prompt("Digite a base"));
+
+    
+
+// tratar a linha de codigo que esta "dando erro"
+    try{
+        escrever(p*p2);
+    }catch(error){
+        alert(error.message);
+        
+    }
+    // mostrar na tela a multiplicação desses numeros
+
+    
+    function escrever(valor){
+    var seletor=document.querySelector("#void");
+    seletor.innerHTML=valor;
+
+    if(isNaN(p)|| isNaN(p2)){
+            throw new Error('Digite algo valido')
+            // então se for diferente, executa este error
+            }
+    }
+
+    function areaTotal(){
+        // quando executar esta função, vai aparecer no alert a conta que desejamos
+        alert('A Area total é ' + (p*p2));
+    }
+
+    // agora temos que tratar dos elementos NaN. Não podemos digitar nada alem de numeros
+
+</script>
+
+</html>
