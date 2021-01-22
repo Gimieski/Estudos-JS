@@ -1,57 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-</head>
-<body>
-    <h1>Mini-Calculadora</h1>
-    <button onclick="calcular('+')">+</button>
-    <button onclick="calcular('-')">-</button>
-    <button onclick="calcular('*')">*</button>
-    <button onclick="calcular('/')">/</button>
-    <!-- onclick ativa uma função -->
+<!doctype html>
 
-    <!-- preciso fazer com que 1 unica função automatize esta cauculadora, mas os parametros recebidos sejam diferente 
-    para que façam coisas diferentes -->
+<html>
 
-    <div id="seletor"></div>
-</body>
-<script>
-    var p=parseFloat(prompt("Digite um número"));
-    // tudo esta muito dependente desta variavel
-    
-    escrever();
-    //FUNÇOES PODEM SER REUTILIZADAS
+    <head>
 
-    function escrever(){
-       var seletor= document.querySelector("#seletor");
-       seletor.innerHTML=p;
-    //o document seleciona a div e escreve o resultado do prompt, Então quando utilizarmos ela de novo, vai pegar oq esta escrito no documento
-    }
-    // um parametro é um valor passado em uma função. os valores ficam onde a função é aplicada, para que elas façam coisas
-    // diferentes. E este simbolo é o nome do parametro que vai armazenar os parametros
-    function calcular(simbolo){
-       var p2=parseFloat(prompt("Digite um numero para efetuar o calculo"));
+        <title>Logica de Programação JavaScript</title>
 
-       switch(simbolo){
-           case '+':
-            p=p+p2;
-            break;
-            case '-':
-            p=p-p2;
-            break;
-            case '*':
-            p=p*p2;
-            break;
-            case '/':
-            p=p/p2;
-            break;
-       } 
-       escrever();
-    // ele ta pegando oq foi escrito desta vez
-    }
+        <meta charset="utf-8">
 
-</script>
+    </head>
+    <body>
+
+        <h1>Lógica de Programação com JavaScrip</h1>
+
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+
+        <div id="output"></div>
+
+    </body>
+        <script>
+
+            var n2 = parseFloat(prompt('Digite um número'));
+             escreve(n2);
+
+            function iniciarCalculo(op){
+// op guarda os simbolos
+                var n1 = document.querySelector('#output').textContent; 
+                n1=parseFloat(n1);
+// ele selecionou a div pegou oq tem dentro e converteu para numero
+                var n2 = parseFloat(prompt('Digite outro número'));
+// depois pediu outro numero
+
+                var msg = calcular(op, n1, n2);s
+// esta var mensagem ela chama a função calcular que por sua vez "ativa" os simbolos, que no switch cada simbolo faz algo, e escreve os numeros digitados
+
+                escreve(msg);
+
+            }
+
+            function escreve(mensagem){
+
+                var output = document.querySelector('#output');
+
+                output.innerHTML = mensagem;
+                // var n2 pede para digitar um numero, e esse numero é guardado dentro de um parametro, no caos mensagem
+
+            }         
+
+            function calcular(op, n1, n2){
+
+                var numeroCalculado = null;
+
+                switch(op){
+
+                    case '+':
+
+                        numeroCalculado = n1 + n2;
+
+                        break;
+
+                    case '-':
+
+                        numeroCalculado = n1 - n2;
+
+                        break;
+
+                    case '*':
+
+                        numeroCalculado = n1 * n2;
+
+                        break;
+
+                    case '/':
+
+                        numeroCalculado = n1 / n2;
+                } 
+
+                return numeroCalculado;
+            }
+        </script>
 </html>
