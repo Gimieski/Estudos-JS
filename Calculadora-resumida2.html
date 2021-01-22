@@ -19,25 +19,27 @@
         <button onclick="iniciarCalculo('/')">/</button>
 
         <div id="output"></div>
-
+<!-- um parametro é um valor para uma função, ele é importante oara podermos usar a mesma função para varias coisas
+ou modelar melhor as funções -->
     </body>
         <script>
 
             var n2 = parseFloat(prompt('Digite um número'));
              escreve(n2);
-
+// armazenddo os operadores para passar para o calculo
             function iniciarCalculo(op){
 // op guarda os simbolos
                 var n1 = document.querySelector('#output').textContent; 
                 n1=parseFloat(n1);
-// ele selecionou a div pegou oq tem dentro e converteu para numero
+// ele selecionou a div pegou oq tem dentro e converteu para numero. adendo: oq vai ter na div é relativo a função escrever
                 var n2 = parseFloat(prompt('Digite outro número'));
 // depois pediu outro numero
 
-                var msg = calcular(op, n1, n2);s
-// esta var mensagem ela chama a função calcular que por sua vez "ativa" os simbolos, que no switch cada simbolo faz algo, e escreve os numeros digitados
-
+                var msg = calcular(op, n1, n2);
+//Escreve o calculo com os operadores e os prefixos das variaveis
                 escreve(msg);
+// depois ele escrever, por causa do codigo da função, e o parametro msg faz com que ele escreva a msg
+// ele escreve de acordo com os parametros SIM!
 
             }
 
@@ -46,7 +48,9 @@
                 var output = document.querySelector('#output');
 
                 output.innerHTML = mensagem;
-                // var n2 pede para digitar um numero, e esse numero é guardado dentro de um parametro, no caos mensagem
+                // mensagem escrevendo o parametro mensagem, mas não quer dizer que é um valor fixo. Quando executamos esta função, ela vai 
+                // escrever o parametro com o valor determinado. Veja o  ex do  escreve(msg);
+            
 
             }         
 
