@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Mini-Calculadora</h1>
+    <button onclick="adicao()">+</button>
+    <button onclick="subtracao()">-</button>
+    <button onclick="multiplicacao()">*</button>
+    <button onclick="divisao()">/</button>
+    <!-- onclick ativa uma função -->
+
+    <div id="seletor"></div>
+</body>
+<script>
+  var p=parseFloat(prompt("Digite um numero"));
+
+  escrever();
+
+  function escrever(){
+      var seletor=document.querySelector("#seletor");
+      seletor.innerHTML=p;
+  }
+
+  function adicao(){
+      var p2=parseFloat(prompt("Digite outro numero"));
+      p=p+p2;
+//não é só p+p2 porque oque vai ser escrito é apenas p  
+      escrever();  
+  }
+
+  function subtracao(){
+      var p2=parseFloat(prompt("Digite outro numero"));
+      p=p-p2;
+//não é só p-p2 porque oque vai ser escrito é apenas p  
+      escrever();  
+  }
+
+  function multiplicacao(){
+      var p2=parseFloat(prompt("Digite outro numero"));
+      p=p*p2;
+//não é só p*p2 porque oque vai ser escrito é apenas p  
+      escrever();  
+  }
+
+  function divisao(){
+      var p2=parseFloat(prompt("Digite outro numero"));
+      p=p/p2;
+//não é só p/p2 porque oque vai ser escrito é apenas p  
+      escrever();  
+  }
+</script>

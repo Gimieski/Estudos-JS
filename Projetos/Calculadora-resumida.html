@@ -19,39 +19,35 @@
     <div id="seletor"></div>
 </body>
 <script>
-    var p=parseFloat(prompt("Digite um número"));
-    // tudo esta muito dependente desta variavel
-    
-    escrever();
-    //FUNÇOES PODEM SER REUTILIZADAS
+ var p=parseFloat(prompt("Digite um numero"));
+ escrever();
 
-    function escrever(){
-       var seletor= document.querySelector("#seletor");
-       seletor.innerHTML=p;
-    //o document seleciona a div e escreve o resultado do prompt, Então quando utilizarmos ela de novo, vai pegar oq esta escrito no documento
-    }
-    // um parametro é um valor passado em uma função. os valores ficam onde a função é aplicada, para que elas façam coisas
-    // diferentes. E este simbolo é o nome do parametro que vai armazenar os parametros
-    function calcular(simbolo){
-       var p2=parseFloat(prompt("Digite um numero para efetuar o calculo"));
+ function escrever(){
+     var seletor=document.querySelector('#seletor');
+     seletor.innerHTML=p;
+ }
 
-       switch(simbolo){
-           case '+':
-            p=p+p2;
-            break;
-            case '-':
-            p=p-p2;
-            break;
-            case '*':
-            p=p*p2;
-            break;
-            case '/':
-            p=p/p2;
-            break;
-       } 
-       escrever();
-    // ele ta pegando oq foi escrito desta vez
-    }
-
+ function calcular(simbolos){
+     var p2= parseFloat(prompt("Digite outro numero"));
+// como queremos efetuar um calculo de acordo com o sinal, usamos o switch, pois ele verifica diferentes condições.
+     switch(simbolos){
+         case '+':
+         p=p+p2;
+         break;
+         case '-':
+         p=p-p2;
+         break;
+         case '*':
+         p=p*p2;
+         break;
+         case '/':
+         p=p/p2;
+         break;    
+           
+        
+     }
+     escrever();
+    //  não colocamos esta função dentro do calcular(), pois ela so vai ser executada la no prompt
+ }
 </script>
 </html>

@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <title>Logica de Programação JavaScript</title>
+
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+
+        <h1>Lógica de Programação com JavaScrip</h1>
+
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+
+        <div id="output"></div>
+<!-- um parametro é um valor para uma função, ele é importante oara podermos usar a mesma função para varias coisas
+ou modelar melhor as funções -->
+    </body>
+        <script>
+            var p=parseFloat(prompt("Digite um numeor"));
+
+            escrever(p);
+
+            function escrever(escritas){
+                var seletor=document.querySelector('#output');
+                seletor.innerHTML=escritas;
+
+            }
+
+            function iniciarCalculo(simbolos){
+                var p2=parseFloat(prompt('Digite outro numero'));
+//depois precisamos de uma função para calcular.podemos usar escrever(p+p2);mas o desafio é implementar uma função
+                var msg=calcular(simbolos, p2);
+
+                escrever(msg);
+                 
+            }
+// simbolos2 vai receber simbolos, sim isso é possivel
+            function calcular(simbolos2, n2){
+                var retornar='';
+/* esta função é para retornar o valor da conta.então temos que pensar assim:
+quando usamos uma função que é para executar alguma coisa é função que recebe. Agora quando queremos que ela
+executa para retornar um valor é funções que retornam valores.No caso dessa é o resultado das contas */
+               switch(simbolos2){
+                   case '+':
+                   retornar=p=p+n2; 
+                   break;
+                   case '-':
+                   retornar=p=p-n2; 
+                   break;
+                   case '*':
+                   retornar=p=p*n2; 
+                   break;
+                   case '/':
+                   retornar=p=p/n2; 
+                   break;
+
+                   return retornar;    
+               }
+            }
+        </script>
+</html>
