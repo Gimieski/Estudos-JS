@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="oi"></div>
+</body>
+<script>
+var name='Gabriel';
+// variavel, um espaço que armazena um valor.
+var names=["Luan","Breno","Gabriel"];
+// array, uma variavel que armazena mais valores
+
+names.push('Gi');
+// names.pop. tira  ultimo da matriz
+alert(name);
+alert(names.join('>'));
+// join transforma em quaqlquer situação o valor deste array em string e podemos definir um separador
+
+console.log(names.length);
+
+
+function validaIdade(idade){
+    var validar;
+    if(idade >=18){
+        validar =true;
+    }else{
+        validar=false;
+    }
+
+    return validar
+}
+var idade=prompt("Digite sua idade");
+
+var seletor=document.querySelector('#oi');
+seletor.innerHTML=validaIdade();
+
+
+</script>
+
+</html>
