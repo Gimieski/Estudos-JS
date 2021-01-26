@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura DOM</title>
+
+    <style>
+        #div1{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            color:white;
+            text-align: center;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p>Paragrafo 0</p>
+    <p>Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <div id="div1">Intereja</div>
+</body>
+<script>
+    var seletor=document.querySelector('#div1');
+
+    seletor.addEventListener('click',clicar);
+    seletor.addEventListener('mousemove',move);
+    seletor.addEventListener('mouseout',saiu);
+    // adiciona um evento para o elemento selecionado
+
+
+
+function clicar(){
+seletor.innerText='clicou';
+}
+
+function move(){
+seletor.innerText='movendo-se';
+}
+
+function saiu(){
+seletor.innerText='Saiu!';
+}
+
+var tag=document.getElementsByTagName('p')[1];
+tag.innerHTML='oi';
+// innerHTML escreve no html, quando queremos escrever só o texto com o innerText não vai as alterações do css
+/*seleciona uma tag, existe diversos getElements(getElementByID, getELementsbyName...)mas o melhor é o
+queryselector, pois ele seleciona todos os tipos*/
+
+
+
+</script>
+</html>
