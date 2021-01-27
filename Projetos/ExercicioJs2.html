@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificado de idade</title>
+    <title>Validaddor de idade</title>
     <meta name='author' content="Gabriel">
-    <link src=style2.css rel=stylesheet>
+    <link href=style2.css rel=stylesheet>
 
 </head>
 <body>
 <header>
-<h1>Validador de Idade</h1> 
+<h1>Verificador de Idade</h1> 
 </header>
-<section>
-    <div></div>
-    <div></div>
+<section class="conteiner">
+    <!-- 400 por 200 -->
+    <div>
+        <p>Ano de nascimento:</p>
+        <input type="number" id="txtano" name= "txtano" min="0" max="100">
+        </p>
+
+        <p>Sexo:
+            <input type="radio" id="masc" name="radsex" value="masc"> 
+            <label for="masc">Masculino</label>
+
+            <input type="radio" id="femi" name="radsex" value="femi"> 
+            <label for="femi">Feminino</label>
+        </p>
+
+        <input type="button" value="verificar" onclick="validar()">
+        <!-- como não podemos escrever para o input usuamos o value -->
+    </div>
+    
+    <div id="resultado">
+        <p>Preencha os campos a cima</p>
+    </div>
 </section>   
 <footer>
     <p>@Gabriel</p>

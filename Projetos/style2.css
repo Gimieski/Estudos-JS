@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(118, 118, 255);
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+    color:white;
+}
+
+.conteiner{
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    height: 280px;
+    margin:auto;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.308);
+}
+
+
+footer{
+    color:white;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+div{
+    text-align: center;
+    padding:10px;
+    
+    
+}
+
+#resultado{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    
+}
+
+
+
+

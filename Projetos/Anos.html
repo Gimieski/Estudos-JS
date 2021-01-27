@@ -15,7 +15,7 @@
       while(sla<=2017){
           sla=sla+4;
           // aqui eles esta escrevendo de 4 em 4
-      // aqui estamos verificando se NÂO é multiplo de 100(pois ano bixesto são de 100), por exemplo se for, vai executar.se não for não vai
+// se não for multiplo de 100 ou for multiplo de 400 vai executar(pois isso se encaixa nos oarametros nos anos bixestos)
       if(!(sla%100 == 0) || (sla%400 == 0)){
           document.write(sla+ "<br>");
       }
