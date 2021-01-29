@@ -37,6 +37,14 @@ div{
 
 }
 
+#resultado{
+    padding: 10px;
+    border: 1px solid black;
+    height: 100px;
+    overflow: scroll;
+
+}
+
 input, label{
     margin-bottom: 10px;
 }

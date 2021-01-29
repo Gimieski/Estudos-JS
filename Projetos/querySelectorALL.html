@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor no input</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+    <script>
+        var paragrafos= document.querySelectorAll("p");
+        // cria um array, pois são varios valores
+
+        var x=0;
+         //acessa a posição deles por este uma variavel(sim isso é possivel)
+        while(paragrafos[x]){
+            paragrafos[x].textContent = x+" - Essa pagina foi hackeada";
+            x++
+        }
+    </script>
+</body>
+</html>
