@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        varLocal()  
+        var globall="variavel global";
+
+        if(true){
+            globall
+            var local="variavel local";
+            let local3="vavriavel local com let"
+            const local4="variavel local com const"
+        }
+
+        function varLocal(){
+            var local2="variavel local em funções";
+            alert(local2); //aqui pode 
+            let local3="vavriavel local com let"
+            const local4="variavel local com const"
+        }
+        console.log(globall)//variaveis que podem ser usadas globalmente
+        console.log(local)//variaveis locais só podem ser usadas localmente no bloco, mas os condicionais não tem escopo de bloco
+        console.log(local2);//ja as funções local onde tem escopo de bloco, não da para utilizar
+        console.log(local4)
+        console.log(local3)//não da para acessar, só em bloco
+ </script>
+</body>
+</html>

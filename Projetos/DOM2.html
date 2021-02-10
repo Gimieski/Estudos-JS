@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes pulando{
+            0%{
+              top:150px;
+            }
+            30%{
+                top:130px;
+            }
+            40%{
+                top:110px;
+            }
+            50%{
+                top: 90px;
+            }
+            80%{
+                top:110px;
+            }
+            90%{
+                top:130px;
+            }
+            100%{
+              top:150px;
+            }
+        }
+
+        @keyframes movimentoH{
+            0%{
+              margin-left: 20px;
+            }
+            100%{
+              margin-left: 60px;
+            }
+        }
+.perso{
+    width:30px;
+    height:30px;
+    background-color: red;
+    position: absolute;
+    top:150px;
+    margin-left: 20px;
+}
+.jump{
+    animation:pulando 1s linear 1;
+}
+
+.moveH{
+    animation: movimentoH 1s linear 1 ;
+}
+    </style>
+</head>
+<body>
+    <div class="perso"></div>
+    <script>
+     const p=document.querySelector(".perso");
+     let isJump=false;
+     let isMove=false;
+
+     function jump(){
+         isJump=true;
+         p.classList.add("jump");
+
+         setTimeout(function(){
+             isJump=false;
+             p.classList.remove("jump");;
+         },1000)
+     }
+
+     function H(){
+         isMove=true;
+         p.classList.add("moveH");
+         setTimeout(function(){
+             isMove=false;
+             p.classList.remove("moveH");;
+         },1000)
+     }
+     document.addEventListener("keydown", function(event){
+        if(event.keyCode===32 && !isJump){
+            jump();
+        } 
+        if(event.keyCode===39 && !isMove && !isJump){
+            H();
+        }
+     })
+
+
+    </script>
+</body>
+</html>
