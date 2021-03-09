@@ -30,3 +30,12 @@
             // object.freeze paralisa as alterações do objeto apertir daquela linha.
             caneta1.mudarCor("blue")
             // então isso não vai funcionar
+
+
+// Temos também outra forma de construir objetos com funções. FactoryFunctions:
+function personFactory(name){
+    return{
+        name:name
+    }
+}
+console.log(personFactory("Lucas"));

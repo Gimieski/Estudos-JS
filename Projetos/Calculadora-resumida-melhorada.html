@@ -1,17 +1,11 @@
 <!doctype html>
-
 <html>
-
     <head>
-
         <title>Logica de Programação JavaScript</title>
-
         <meta charset="utf-8">
-
     </head>
     <body>
-
-        <h1>Lógica de Programação com JavaScrip</h1>
+        <h1>Lógica de Programação com JavaScript</h1>
 
         <button onclick="iniciarCalculo('+')">+</button>
         <button onclick="iniciarCalculo('-')">-</button>
@@ -23,7 +17,6 @@
 ou modelar melhor as funções -->
     </body>
         <script>
-
             var n2 = parseFloat(prompt('Digite um número'));
              escreve(n2);
 //Pede para escrever um numero e depois executa a função escrever com o parametro n2, ou seja faz a função escrever com o valor n2. Ou seja escreve n2
@@ -31,10 +24,9 @@ ou modelar melhor as funções -->
 //Quando clicarmos nos botões executa esta função, que op é o paramtro que recebe os simbolos(então aqui não esta executando nada, é a criação da )
                 var n1 = document.querySelector('#output').textContent; 
                 n1=parseFloat(n1);
-// ele selecionou a div pegou oq tem dentro e converteu para numero. adendo: oq vai ter na div é relativo a função escrever
+// ele selecionou a div pegou oq tem dentro e converteu para numero(que é o n2 do inicio). adendo: oq vai ter na div é relativo a função escrever
                 var n2 = parseFloat(prompt('Digite outro número'));
 // depois pediu outro numero
-
                 var msg = calcular(op, n1, n2);
 //Var msg armazena a execução do codigo calcular recebendo paramtros na hora da execução
 // eu preciso botar os paramtros aqui para usar depois
@@ -44,10 +36,7 @@ ou modelar melhor as funções -->
 // ele escreve de acordo com os parametros: SIM!
 
 // calcular vai retornar o valor e escrever.Literalmente como foi dito, a função calcular esta dando ordens para os parametros, mas eles fazem isso em diferentes lugares e diferentes vlaores
-
-
             }
-
             function escreve(mensagem){
 
                 var output = document.querySelector('#output');

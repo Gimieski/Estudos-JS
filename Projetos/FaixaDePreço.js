@@ -11,9 +11,9 @@ let faixas=[
 
 function criarFaixas(tooltip,minimo,maximo){
     return{
-        tooltip,
-        minimo,
-        maximo
+        tooltip:tooltip,
+        minimo:minimo,
+        maximo:maximo
     }
 }
 
@@ -36,3 +36,7 @@ function criandoFaixas(tooltip,minimo,maximo){
  new criandoFaixas("até 1000",700,1000),
  new criandoFaixas("até 9000",1000,9000)
 ]
+
+console.log(faixas)
+console.log(faixas2)
+console.log(faixas3)

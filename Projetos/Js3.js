@@ -19,7 +19,7 @@ function contar(){
         if(i<f){
             for(i; i<=f; i+=p)
             res.innerHTML+=i+" ";
-            // para que a cada loop +p
+            // para que a cada loop +p no i
         }else{
             //enquanto o i for maior que f ele vai diminuindo os passo 
             for(i;i>f;i-=p){
